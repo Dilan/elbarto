@@ -22,6 +22,7 @@ RUN apt-get update && \
 
 RUN pip install numpy
 RUN pip install matplotlib
+RUN pip install pillow
 RUN pip install opencv_contrib_python
 
 RUN python3 -m pip install --upgrade pip

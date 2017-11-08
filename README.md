@@ -8,7 +8,7 @@ Build image
 
 Run image and share some volume to make possible to store changes in your local machine
 
-    $ docker run -d --name elbarto -p 8888:8888 -v ~/Node/dilan/elbarto/face-recognition:/home elbarto:v1.0
+    $ docker run -d --name elbarto -p 8888:8888 -v ~/Node/dilan/elbarto/face-recognition:/home hackerloft/opencv:v1.0
 
 Fetch Jupyter's token
 
