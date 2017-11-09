@@ -23,3 +23,21 @@ Fetch Jupyter's token
 # In case you want to jump inside container:
 
     $ docker exec -it elbarto bash
+
+# Convert notebook to script
+
+    # (inside container)
+    $ jupyter nbconvert --to script /home/DetectFace.ipynb --stdout > /home/DetectFace.py
+    # (outside container)
+    $ docker exec -it elbarto jupyter nbconvert --to script /home/DetectFace.ipynb
+
+
+
+Useful Links
+
+    https://github.com/informramiz/Fully-Convolutional-Networks/blob/master/CarND-Object-Detection-Lab.ipynb
+
+    https://blog.openai.com/universe/
+
+    # pandas
+    https://bitbucket.org/hrojas/learn-pandas
