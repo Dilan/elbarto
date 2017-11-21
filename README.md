@@ -1,14 +1,27 @@
 # Face/Object Recognition
 
+Steps:
+
+    $ git clone git@github.com:Dilan/elbarto.git ~/projects/elbarto
+    $ cd ~/projects/elbarto
+    $ docker pull hackerloft/opencv:v1.0
+    $ docker run -d --name elbarto -p 8888:8888 -v ~/projects/elbarto/face-recognition:/home hackerloft/opencv:v1.0
+    $ docker exec -it elbarto python /home/get_faces.py /home/test-data/test_Diana_Vera.jpg /home/output/
+
+
 # Docker
 
 Build image
 
     $ docker build -t opencv:v1.0 .
 
+... or just pull it from hub.docker.com
+
+    docker pull hackerloft/opencv:v1.0
+
 Run image and share some volume to make possible to store changes in your local machine
 
-    $ docker run -d --name elbarto -p 8888:8888 -v ~/Node/dilan/elbarto/face-recognition:/home hackerloft/opencv:v1.0
+    $ docker run -d --name elbarto -p 8888:8888 -v ~/projects/elbarto/face-recognition:/home hackerloft/opencv:v1.0
 
 Fetch Jupyter's token
 
