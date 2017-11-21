@@ -31,9 +31,15 @@ Fetch Jupyter's token
     # (outside container)
     $ docker exec -it elbarto jupyter nbconvert --to script /home/DetectFace.ipynb
 
+# Find faces and save to "output" folder
 
+    $ docker exec -it elbarto python /home/get_faces.py /home/test-data/test_Diana_Vera.jpg /home/output/
 
 Useful Links
+
+    https://github.com/caesar0301/awesome-public-datasets
+
+    https://www.pyimagesearch.com/
 
     https://github.com/informramiz/Fully-Convolutional-Networks/blob/master/CarND-Object-Detection-Lab.ipynb
 

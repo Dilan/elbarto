@@ -1,8 +1,4 @@
-
 # coding: utf-8
-
-# In[147]:
-
 
 import cv2
 import os
@@ -33,7 +29,7 @@ def detect_face(img):
     # where face is "rect" - (x, y, w, h)
     faces = fc.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=3)
     faces_h = fch.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
-    
+
     # choose moooooore faces
     if len(faces_h) > len(faces):
         faces = faces_h
@@ -42,7 +38,7 @@ def detect_face(img):
     for face in faces:
         (x, y, w, h) = face
         result.append((gray[y:y+w, x:x+h], face))
-    
+
     # [(grayImg, rect), ...]
     return result
 
@@ -71,11 +67,10 @@ for img_path in img_path_list:
     faces = detect_face(img)
     for item in faces:
         draw_rectangle(img, item[1])
-    
+
     plt.annotate(os.path.basename(img_path), xy=(0, 0), xytext=(0, 0))
     plt.imshow(img)
     plt.xticks([]), plt.yticks([])
     i+=1
 
 plt.show()
-
