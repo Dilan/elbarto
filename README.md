@@ -2,7 +2,7 @@
 
 Steps:
 
-    $ git clone git@github.com:Dilan/elbarto.git ~/projects/elbarto
+    $ git clone https://github.com/Dilan/elbarto.git ~/projects/elbarto
     $ cd ~/projects/elbarto
     $ docker pull hackerloft/opencv:v1.0
     $ docker run -d --name elbarto -p 8888:8888 -v ~/projects/elbarto/face-recognition:/home hackerloft/opencv:v1.0
